@@ -103,7 +103,7 @@
         <section class="home section active" id="home">
           <div class="container">
             <div class="intro">
-              <img src="/images/about.jpg" alt="profile" class="shadow-dark" />
+              <img src="./images/about.jpg" alt="profile" class="shadow-dark" />
               <h1>Devin Cooper</h1>
               <p>Full Stack Java Developer</p>
               <div class="social-link">
@@ -354,7 +354,7 @@
               <div class="portfolio-item padd-15" data-category="web-design">
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-img">
-                    <img src="/images/portfolio/1.jpg" alt="portfolio" />
+                    <img src="./images/portfolio/1.jpg" alt="portfolio" />
                   </div>
                   <div class="portfolio-info">
                     <h4>Web Design</h4>
@@ -369,7 +369,7 @@
               <div class="portfolio-item padd-15" data-category="web-app">
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-img">
-                    <img src="/images/portfolio/2.jpg" alt="portfolio" />
+                    <img src="./images/portfolio/2.jpg" alt="portfolio" />
                   </div>
                   <div class="portfolio-info">
                     <h4>Web App</h4>
@@ -384,7 +384,7 @@
               <div class="portfolio-item padd-15" data-category="web-app">
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-img">
-                    <img src="/images/portfolio/3.jpg" alt="portfolio" />
+                    <img src="./images/portfolio/3.jpg" alt="portfolio" />
                   </div>
                   <div class="portfolio-info">
                     <h4>Web App</h4>
@@ -399,7 +399,7 @@
               <div class="portfolio-item padd-15" data-category="web-design">
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-img">
-                    <img src="/images/portfolio/4.jpg" alt="portfolio" />
+                    <img src="./images/portfolio/4.jpg" alt="portfolio" />
                   </div>
                   <div class="portfolio-info">
                     <h4>Web Design</h4>
@@ -414,7 +414,7 @@
               <div class="portfolio-item padd-15" data-category="console">
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-img">
-                    <img src="/images/portfolio/5.jpg" alt="portfolio" />
+                    <img src="./images/portfolio/5.jpg" alt="portfolio" />
                   </div>
                   <div class="portfolio-info">
                     <h4>Console</h4>
@@ -429,7 +429,7 @@
               <div class="portfolio-item padd-15" data-category="console">
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-img">
-                    <img src="/images/portfolio/6.jpg" alt="portfolio" />
+                    <img src="./images/portfolio/6.jpg" alt="portfolio" />
                   </div>
                   <div class="portfolio-info">
                     <h4>Console</h4>
@@ -458,7 +458,7 @@
               <div class="blog-item padd-15">
                 <div class="blog-item-inner shadow-dark">
                   <div class="blog-img">
-                    <img src="images/blog/1.jpg" alt="blog" />
+                    <img src="./images/blog/1.jpg" alt="blog" />
                     <div class="blog-date">4 Jun 2020</div>
                   </div>
                   <div class="blog-info">
@@ -479,7 +479,7 @@
               <div class="blog-item padd-15">
                 <div class="blog-item-inner shadow-dark">
                   <div class="blog-img">
-                    <img src="images/blog/2.jpg" alt="blog" />
+                    <img src="./images/blog/2.jpg" alt="blog" />
                     <div class="blog-date">4 Jun 2020</div>
                   </div>
                   <div class="blog-info">
@@ -500,7 +500,7 @@
               <div class="blog-item padd-15">
                 <div class="blog-item-inner shadow-dark">
                   <div class="blog-img">
-                    <img src="images/blog/3.jpg" alt="blog" />
+                    <img src="./images/blog/3.jpg" alt="blog" />
                     <div class="blog-date">4 Jun 2020</div>
                   </div>
                   <div class="blog-info">
@@ -553,7 +553,11 @@
             </div>
             <!-- Contact Form -->
             <div class="row">
-              <form class="contact-form padd-15">
+              <form
+                class="contact-form padd-15"
+                action="https://formspree.io/devin@devincooper.tech"
+                method="POST"
+              >
                 <div class="row">
                   <div class="form-item col-6 padd-15">
                     <div class="form-group">
@@ -561,15 +565,17 @@
                         type="text"
                         class="form-control"
                         placeholder="Name*"
+                        name="name"
                       />
                     </div>
                   </div>
                   <div class="form-item col-6 padd-15">
                     <div class="form-group">
                       <input
-                        type="text"
+                        type="email"
                         class="form-control"
                         placeholder="Email*"
+                        name="_replyto"
                       />
                     </div>
                   </div>
@@ -581,6 +587,7 @@
                         type="text"
                         class="form-control"
                         placeholder="Subject*"
+                        name="_subject"
                       />
                     </div>
                   </div>
@@ -591,13 +598,16 @@
                       <textarea
                         class="form-control"
                         placeholder="Your message..."
+                        name="message"
                       ></textarea>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-12 padd-15">
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="btn" value="Send">
+                      Send Message
+                    </button>
                   </div>
                 </div>
               </form>
@@ -616,7 +626,7 @@
       <div class="lightbox-content">
         <div class="lightbox-close">&times;</div>
         <img
-          src="images/portfolio/2.jpg"
+          src="./images/portfolio/2.jpg"
           alt=""
           class="lightbox-img"
           onclick="nextItem()"
@@ -707,9 +717,9 @@
     <!-- Live Style Switcher - Demo Only End -->
 
     <!-- Template js -->
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 
     <!-- Live Style js - Demo Only -->
-    <script src="js/styleSwitcher.js"></script>
+    <script src="./js/styleSwitcher.js"></script>
   </body>
 </html>
