@@ -90,7 +90,7 @@ function navigateToWebApp() {
   imgURL = portfolioItems[itemIndex]
     .querySelector(".portfolio-img img")
     .getAttribute("id");
-  window.location.href = imgURL;
+  window.open(imgURL);
 }
 
 // close Lightbox
