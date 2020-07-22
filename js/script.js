@@ -42,6 +42,7 @@ const lightbox = document.querySelector(".lightbox"),
   lightboxText = lightbox.querySelector(".caption-text"),
   lightboxCounter = lightbox.querySelector(".caption-counter");
 let itemIndex = 0;
+let idURL = "";
 
 for (let i = 0; i < totalPortfolioItem; i++) {
   portfolioItems[i].addEventListener("click", function () {
@@ -78,10 +79,18 @@ function changeItem() {
     .querySelector(".portfolio-img img")
     .getAttribute("src");
   lightboxImg.src = imgSrc;
-  lightboxText.innerHTML = portfolioItems[itemIndex].querySelector(
-    "h4"
-  ).innerHTML;
+  // lightboxText.innerHTML = portfolioItems[itemIndex].querySelector(
+  //   "h4"
+  // ).innerHTML;
+  lightboxText.innerHTML = "Click image to open app";
   lightboxCounter.innerHTML = itemIndex + 1 + " of " + totalPortfolioItem;
+}
+
+function navigateToWebApp() {
+  imgURL = portfolioItems[itemIndex]
+    .querySelector(".portfolio-img img")
+    .getAttribute("id");
+  window.location.href = imgURL;
 }
 
 // close Lightbox
